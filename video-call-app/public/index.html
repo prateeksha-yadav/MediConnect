@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediConnect - Doctor Patient Video Consultation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-heartbeat"></i> MediConnect</h1>
+            <p class="subtitle">Secure Doctor-Patient Video Consultation</p>
+        </header>
+
+        <div class="role-selection">
+            <button id="doctorBtn" class="role-btn active">
+                <i class="fas fa-user-md"></i> I'm a Doctor
+            </button>
+            <button id="patientBtn" class="role-btn">
+                <i class="fas fa-procedures"></i> I'm a Patient
+            </button>
+        </div>
+
+        <div class="video-container">
+            <div class="video-box" id="localVideoContainer" data-label="DOCTOR">
+                <video id="localVideo" autoplay muted playsinline></video>
+                <div class="user-info"></div>
+            </div>
+            <div class="video-box" id="remoteVideoContainer" data-label="PATIENT">
+                <video id="remoteVideo" autoplay playsinline></video>
+                <div class="user-info"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="input-group">
+                <input type="text" id="roomId" placeholder="Enter Consultation ID">
+                <button id="joinBtn"><i class="fas fa-sign-in-alt"></i> Join</button>
+            </div>
+            <button id="callBtn" disabled><i class="fas fa-video"></i> Start Consultation</button>
+            <button id="hangupBtn" disabled><i class="fas fa-phone-slash"></i> End Call</button>
+        </div>
+
+        <div class="consultation-timer">
+            <i class="fas fa-clock"></i>
+            <span id="timer">00:00</span>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
