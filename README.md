@@ -23,8 +23,7 @@
 
 MediConnect is a secure, real-time video consultation application designed to bridge the communication gap between doctors and patients. It provides a simple and intuitive interface for one-on-one video calls, complete with role selection and a consultation timer.
 
-![MediConnect Screenshot](https://i.imgur.com/your-screenshot.png) 
-*(Replace this with a screenshot of your application)*
+
 
 ### ✨ Key Features:
 *   **Role Selection:** Join as a "Doctor" or a "Patient".
